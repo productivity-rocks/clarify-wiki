@@ -1,0 +1,152 @@
+.wrapper {
+    min-height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3.4rem 20px 1rem 20px;
+    .innerWrapper {
+        width: 100%;
+        max-width: 980px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    #article {
+        .infos {
+            font-size: 14px;
+            margin-bottom: .8rem;
+            * {
+                color: #757a7c;
+            }
+        }
+        h1.error {
+            text-align: center;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: .4em;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        h2 {
+            margin-block-start: 2rem;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+        h4 {
+            font-size: 1.2rem;
+        }
+        p {
+            margin-top: .2em;
+            margin-bottom: 0;
+            font-size: 17px;
+            line-height: 1.45;
+            letter-spacing: -0.002em;
+            color: #afb1b2;
+            * {
+                font-size: 17px;
+            }
+        }
+        .tableContainer {
+            overflow: scroll;
+            max-width: 100%;
+            width: calc(100vw - 30px);
+        }
+        table {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            img.min {
+                max-width: 40px;
+            }
+            img.mid {
+                margin: auto;
+            }
+        }
+        thead {
+            background: #5C8374;
+        }
+        th,
+        td {
+            padding: .4rem .5rem;
+        }
+        td {
+            color: #e8e8e8;
+            background: #131b1f;
+            max-width: 240px;
+        }
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        blockquote {
+            margin: 0 0 1rem;
+            padding: 0 1rem;
+            border-left: 2px solid #ccc;
+            color: #555;
+        }  
+    }
+    #question {
+        width: 100%;
+        background: #5C8374;
+        padding: 1rem;
+        border-radius: 15px;
+        input {
+            background: none;
+            font-size: 1.8rem;
+            border: none;
+            outline: none;
+            width: 100%;
+            &::placeholder {
+                color: #93B1A6;
+            }
+        }
+    }
+}
+
+.current {
+    width: fit-content;
+    margin: .4rem auto;
+    font-weight: 300;
+    span {
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 575px) {
+}
+@media screen and (min-width: 767px) {
+    .wrapper {
+        padding: 4.8rem 20px 1rem 20px;
+        #article {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 34px;
+                font-weight: 400;
+            }
+            h3 {
+                font-size: 1.7rem;
+            }
+            h4 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

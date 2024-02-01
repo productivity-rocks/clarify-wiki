@@ -1,0 +1,44 @@
+<section id="landing">
+    <div class="contentBox">
+        <div></div>
+        <div class="main">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Clarify Wiki Logo">
+            </div>
+            <h1>Clarify Wiki</h1>
+            <div class="search">
+                <input type="text" placeholder="searching for article..." [(ngModel)]="searchTerm" (input)="search()">
+                <div class="results">
+                </div>
+            </div>
+            <h2>Everything. Just clear and easy.</h2>
+        </div>
+        <div class="scroll">
+            <span>Learn about Clairfy</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                <path
+                    d="M25.828 2.75987C25.828 2.39457 25.6887 2.02956 25.4099 1.75073C24.8528 1.19336 23.9493 1.19336 23.3922 1.75073L12.9854 12.1575L2.57866 1.75073C2.02129 1.19336 1.11775 1.19336 0.560665 1.75073C0.00358214 2.3081 0.00358214 3.21136 0.560665 3.76873L11.9763 15.1844C12.244 15.452 12.6067 15.6024 12.9854 15.6024C13.3641 15.6024 13.7269 15.4523 13.9943 15.1844L25.4099 3.76873C25.6885 3.49018 25.828 3.12488 25.828 2.75987Z"
+                    fill="#404040" />
+                <path
+                    d="M25.828 11.7956C25.828 11.4303 25.6888 11.0653 25.4099 10.7865C24.8528 10.2291 23.9493 10.2291 23.3922 10.7865L12.9854 21.193L2.57868 10.7865C2.02131 10.2291 1.11776 10.2291 0.56068 10.7865C0.00359721 11.3441 0.00388262 12.2474 0.56068 12.8045L11.9763 24.2198C12.5337 24.7772 13.4372 24.7772 13.9943 24.2198L25.4099 12.8045C25.6885 12.526 25.828 12.1609 25.828 11.7956Z"
+                    fill="#404040" />
+            </svg>
+        </div>
+    </div>
+</section>
+<section id="monthly-articles" *ngIf="calculateRemainingArticles().error == false">
+    <h2>Monthly Article Goal</h2>
+    <div class="bar">
+        <div class="inner" [style.width.%]="calculateRemainingArticles().percent">
+            <p>{{ calculateRemainingArticles().left }} articles left ({{ calculateRemainingArticles().percent }}%)</p>
+        </div>
+    </div>
+</section>
+<section id="all-articles">
+    <h2>List Of All {{ articles?.length }} Articles</h2>
+    <ul id="articleList">
+        <li *ngFor="let article of articles">
+            <a [routerLink]="['/', article.path]">{{ article.title }}</a>
+        </li>
+    </ul>
+</section>

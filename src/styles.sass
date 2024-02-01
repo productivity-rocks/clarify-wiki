@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+$fullHeight: 100vh
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: 1rem
+    color: #f2f2f2
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+header
+    padding: 1rem 20px
+    background: #183D3D
+    display: flex
+    gap: 1.2rem
+    position: sticky
+    top: 0
+    left: 0
+body
+    background: #040D12
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+    overflow-wrap: break-word
+
+a
+    color: #7ea697
+    text-decoration: none
+a:hover
+    text-decoration: underline
+
+:root
+    $fullHeight: 100vh
+
+@supports (height: 100dvh)
+:root
+    $fullHeight: 100dvh
